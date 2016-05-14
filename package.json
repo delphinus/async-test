@@ -14,7 +14,7 @@
     "typings": "^0.8.1"
   },
   "scripts": {
-    "build": "tsc index.ts",
+    "build": "tsc -p .",
     "install": "typings install && tsc -p ."
   },
   "repository": {
