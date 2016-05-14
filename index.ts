@@ -19,19 +19,18 @@ function getRandomPonyFooArticle(): Promise<string> {
     });
 }
 
-function printRandomArticle() {
+async function read() {
 
-    getRandomPonyFooArticle()
-        .then(html => hget(html, {
-            markdown: true,
-            root: "main",
-            ignore: ".at-subscribe,.mm-comments,.de-sidebar",
-        }))
-        .then(md => marked(md, {
-            renderer: new Term(),
-        }))
-        .then(txt => console.log(txt))
-        .catch(reason => console.error(reason));
+    const html = await getRandomPonyFooArticle();
+    const md = hget(html, {
+        markdown: true,
+        root: "main",
+        ignore: ".at-subscribe,.mm-comments,.de-sidebar",
+    });
+    const txt = marked(md, {
+        renderer: new Term(),
+    });
+    console.log(txt);
 }
 
-printRandomArticle();
+read();
