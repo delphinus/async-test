@@ -1,6 +1,8 @@
 {
   "ambientDevDependencies": {
+    "form-data": "registry:dt/form-data#0.0.0+20160316155526",
     "jquery": "registry:dt/jquery#1.10.0+20160417213236",
+    "node": "registry:dt/node#4.0.0+20160509154515",
     "request": "registry:dt/request#0.0.0+20160316155526"
   }
 }
