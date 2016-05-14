@@ -6,11 +6,15 @@ import * as hget from "hget";
 import * as marked from "marked";
 import * as Term from "marked-terminal";
 
-const getRandomPonyFooArticle: () => Promise<string> = () => new Promise((resolve, reject) => {
-    request("https://ponyfoo.com/articles/random", (err, res, body) => {
-        if (err) {
-            reject(err); return;
-        }
-        resolve(body);
+function getRandomPonyFooArticle() {
+
+    return new Promise((resolve, reject) => {
+
+        return request("https://ponyfoo.com/articles/random", (err, res, body) => {
+            if (err) {
+                reject(err); return;
+            }
+            resolve(body);
+        });
     });
-});
+}
