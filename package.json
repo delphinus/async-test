@@ -5,7 +5,11 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "hget": "^3.0.0",
     "jquery": "^2.2.3",
+    "marked": "^0.3.5",
+    "marked-terminal": "^1.6.1",
+    "request": "^2.72.0",
     "typescript": "^1.8.10",
     "typings": "^0.8.1"
   },
