@@ -2,10 +2,10 @@ declare namespace Hget {
 
     interface Options {
 
-        root:     string;
-        ignore:   string | string[];
-        html:     boolean;
-        markdown: boolean;
+        root?:     string;
+        ignore?:   string | string[];
+        html?:     boolean;
+        markdown?: boolean;
     }
 
     interface Static {
@@ -25,7 +25,8 @@ declare namespace Marked {
 
     interface Options {
 
-        highlight: (code: string, lang?: string, callback?: Callback) => string;
+        highlight?: (code: string, lang?: string, callback?: Callback) => string;
+        renderer?: Renderer;
     }
 
     interface Callback {
