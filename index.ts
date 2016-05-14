@@ -6,7 +6,7 @@ import * as hget from "hget";
 import * as marked from "marked";
 import * as Term from "marked-terminal";
 
-function getRandomPonyFooArticle() {
+function getRandomPonyFooArticle(): Promise<string> {
 
     return new Promise((resolve, reject) => {
 
